@@ -1,0 +1,1408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#667eea">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="MoneyMate">
+    <link rel="manifest" href="data:application/json;base64,ewogICJuYW1lIjogIk1vbmV5TWF0ZSAtIEJ1ZGdldCBUcmFja2VyIiwKICAic2hvcnRfbmFtZSI6ICJNb25leU1hdGUiLAogICJkZXNjcmlwdGlvbiI6ICJUcmFjayB5b3VyIG1vbnRobHkgaW5jb21lIGFuZCBleHBlbnNlcyIsCiAgInN0YXJ0X3VybCI6ICIuLyIsCiAgImRpc3BsYXkiOiAic3RhbmRhbG9uZSIsCiAgImJhY2tncm91bmRfY29sb3IiOiAiI2ZmZmZmZiIsCiAgInRoZW1lX2NvbG9yIjogIiM2NjdlZWEiLAogICJpY29ucyI6IFsKICAgIHsKICAgICAgInNyYyI6ICJkYXRhOmltYWdlL3N2Zyt4bWw7YmFzZTY0LFBITjJaeUI0Yld4dWN6MGlhSFIwY0RvdkwzZDNkeTUzTXk1dmNtY3ZNakF3TUM5emRtY2lJSFpwWlhkQ2IzZzlJakFnTUNBMU1USWdOVEV5SWo0OGNtVmpkQ0IzYVdSMGFEMGlOVEV5SWlCb1pXbG5hSFE5SWpVeE1pSWdabWxzYkQwaUl6WTJOMlZsWVNJdlBqeDBaWGgwSUhnOUlqSTFOaUlnZVQwaU1qVTJJaUJtYjI1MExYTnBlbVU5SWpFeU1DSWdkR1Y0ZEMxaGJtTm9iM0k5SW0xcFpHUnNaU0lnWm1sc2JEMGlJMlptWmlJK0pqUnRiM0J6T3p3dmRHVjRkRDQ4ZEdWNGRDQjRQU0l5TlRZaUlIazlJak0wTUNJZ1ptOXVkQzF6YVhwbFBTSXhNREFpSUhSbGVIUXRZVzVqYUc5eVBTSnRhV1JrYkdVaUlHWnBiR3c5SWlObVptWWlQazF2Ym1WNVRXRjBaVHd2ZEdWNGRENDhMMk4xY21Oc2VUNDhMMk4xY21Oc2VUNDhjMmx5WTJ4bElHTjRQU0l5TlRZaUlHTjVQU0l5TlRZaUlISTlJakV3TUNJZ1ptbHNiRDBpYm05dVpTSWdjM1J5YjJ0bFBTSWpaV1ZsTUdVM0lpQnpkSEp2YTJVdGQybGtkR2c5SWpJaVBqd3ZZMmx5WTJ4bFBqeHdZWFJvSUdROUlrMHlOVFlzTWpBd0lHTXRNakF1TkN3d0xUTTNMRGd1TlMwek55d3lPU0F3TERJM0xqSXNNalVzTXpjc01qY3VNaUIwSURBc05UUXVOQzB5Tnk0eUxESTFMVE0zTFRJM0xqSWdNQ0F0TlRRdU5Dd3lOeTR5TFRJMUxUTTNMVEkzTGpJZ2RDQXdMRFUwTGpRZ01qY3VNaXd5TlNBek55d3lOeTR5SWlCemRISnZhMlU5SWlObVptWWlJSE4wY205clpTMTNhV1IwYUQwaU1pSWdjM1J5YjJ0bExXeHBibVZqWVhBOUluSnZkVzVrSWlCemRISnZhMlV0YkdsdVpXcHZhVzQ5SW5KdmRXNWtJaTgrUEM5d1lYUm9QaUF3TURBd01EQXdQQzl6ZG1jK0lnLAogICAgICAic2l6ZXMiOiAiNTEyeDUxMiIsCiAgICAgICJ0eXBlIjogImltYWdlL3N2Zyt4bWwiCiAgICB9LAogICAgewogICAgICAic3JjIjogImRhdGE6aW1hZ2Uvc3ZnK3htbDtiYXNlNjQsUEhOMlp5QjRiV3h1Y3owaWFIUjBjRG92TDNkM2R5NTNNeTV2Y21jdk1qQXdNQzl6ZG1jaUlIWnBaWGRDYjNnOUlqQWdNQ0F4T1RJZ01Ua3lJajQ4Y21WamRDQjNhV1IwYUQwaU1Ua3lJaUJvWldsbmFIUTlJakU1TWlJZ1ptbHNiRDBpSXpZMk4yVmxZU0l2UGp4MFpYaDBJSGc5SWprMklpQjVQU0k1TmlJZ1ptOXVkQzF6YVhwbFBTSTBOQ0lnZEdWNGRDMWhibU5vYjNJOUltMXBaR1JzWlNJZ1ptbHNiRDBpSXlabVptWWlQaVkwYlc5d2N6czhMM1JsZUhRK1BIUmxlSFFnZUQwaU9UWWlJSGs5SWpFeU55SWdabTl1ZEMxemFYcGxQU0l6TmlJZ2RHVjRkQzFoYm1Ob2IzSTlJbTFwWkdSc1pTSWdabWxzYkQwaUl5Wm1abVlpUGsxdmJtVjVUV0YwWlR3dmRHVjRkRDQ4TDJOMWNtTnNaVDQ4TDJOMWNtTnNaVDQ4WTJseVkyeGxJR040UFNJNU5pSWdZM2s5SWprMklpQnlQU0kwTUNJZ1ptbHNiRDBpYm05dVpTSWdjM1J5YjJ0bFBTSWpaV1ZsTUdVM0lpQnpkSEp2YTJVdGQybGtkR2c5SWpJaVBqd3ZZMmx5WTJ4bFBqeHdZWFJvSUdROUlrMDVOaXcwT0NCakxUY3VOaXd3TFRFekxqY3NOeTQwTFRFekxqY3NNVEVnTUNBNExqa3NPUzR6TERFekxqY3NNVEVnZENBd0xESXlMalF0T0M0NUxEa3VNeTB4TXk0M0xERXhJREFnTFRJeUxqUXNPQzQ1TFRrdU15MHhNeTQzTFRFeElIUWdNQ3d5TWk0MElEZ3VPU3c1TGpNZ01UTXVOeXd4TVNJZ2MzUnliMnRsUFNJalpsbVptSWlCemRISnZhMlV0ZDJsa2RHZzlJaklpSUhOMGNtOXJaUzFzYVc1bFkyRndQU0p5YjNWdVpDSWdjM1J5YjJ0bExXeHBibVZxYjJsdVBTSnliM1Z1WkNJdlBpQXdNREF3TURBd1BDOXpkbWMrSWcsCiAgICAgICJzaXplcyI6ICIxOTJ4MTkyIiwKICAgICAgInR5cGUiOiAiaW1hZ2Uvc3ZnK3htbCIKICAgIH0KICBdCn0=">
+    <link rel="apple-touch-icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxOTIgMTkyIj48cmVjdCB3aWR0aD0iMTkyIiBoZWlnaHQ9IjE5MiIgZmlsbD0iIzY2N2VlYSIvPjx0ZXh0IHg9Ijk2IiB5PSI5NiIgZm9udC1zaXplPSI0NCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iI2ZmZiI+JiM0bW9wczsmbW9wczsmbW9wczsmbW9wczs8L3RleHQ+PHRleHQgeD0iOTYiIHk9IjEyNyIgZm9udC1zaXplPSIzNiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iI2ZmZiI+TW9uZXlNYXRlPC90ZXh0PjwvY3VyY2xlPjwvY3VyY2xlPjxjaXJjbGUgY3g9Ijk2IiBjeT0iOTYiIHI9IjQwIiBmaWxsPSJub25lIiBzdHJva2U9IiNlZWUwZTciIHN0cm9rZS13aWR0aD0iMiIvPjxwYXRoIGQ9Ik05Niw0OCBjLTcuNiwwLTEzLjcsNy40LTEzLjcsMTEgMCw4LjksOS4zLDEzLjcsMTEgdCAwLDIyLjQtOC45LDkuMy0xMy43LDExIDAgLTIyLjQsOC45LTkuMywxMy43LDExIHQgMCwyMi40IDguOSw5LjMsMTMuNywxMSIgc3Ryb2tlPSIjZmZmIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPiAwMDAwMDA8L3N2Zz4g">
+    <title>MoneyMate - Budget Tracker</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* Install Prompt */
+        .install-prompt {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: white;
+            padding: 15px 25px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            z-index: 1000;
+            max-width: 90%;
+        }
+
+        .install-prompt button {
+            padding: 10px 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        .install-prompt .close-btn {
+            background: #e5e7eb;
+            color: #666;
+            padding: 5px 10px;
+        }
+
+        /* Login Page Styles */
+        .login-container {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .login-card {
+            background: white;
+            border-radius: 20px;
+            padding: 50px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            max-width: 450px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .logo-container {
+            margin-bottom: 30px;
+        }
+
+        .app-logo {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+        }
+
+        .app-logo svg {
+            width: 70px;
+            height: 70px;
+            color: white;
+        }
+
+        .app-name {
+            font-size: 2.5em;
+            font-weight: bold;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 10px;
+        }
+
+        .app-tagline {
+            color: #666;
+            font-size: 1.1em;
+            margin-bottom: 40px;
+        }
+
+        .auth-tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+
+        .auth-tab {
+            flex: 1;
+            padding: 12px;
+            background: #f3f4f6;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 1em;
+            font-weight: 600;
+            color: #666;
+            transition: all 0.3s;
+        }
+
+        .auth-tab.active {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .login-form {
+            text-align: left;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #666;
+            font-weight: 500;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #e5e7eb;
+            border-radius: 10px;
+            font-size: 1em;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .password-input-wrapper {
+            position: relative;
+        }
+
+        .password-toggle {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: #666;
+            font-size: 1.2em;
+        }
+
+        .login-btn {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s;
+            margin-top: 10px;
+        }
+
+        .login-btn:hover {
+            transform: scale(1.02);
+        }
+
+        .login-btn:active {
+            transform: scale(0.98);
+        }
+
+        .error-message {
+            background: #fee2e2;
+            color: #dc2626;
+            padding: 12px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-size: 0.9em;
+        }
+
+        .success-message {
+            background: #d1fae5;
+            color: #059669;
+            padding: 12px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-size: 0.9em;
+        }
+
+        /* App Container Styles */
+        .app-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .header-logo {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .header-logo svg {
+            width: 35px;
+            height: 35px;
+            color: white;
+        }
+
+        .header-info h1 {
+            color: #667eea;
+            font-size: 2em;
+            margin-bottom: 5px;
+        }
+
+        .header-info p {
+            color: #666;
+            font-size: 1em;
+        }
+
+        .user-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .user-avatar {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 1.3em;
+        }
+
+        .user-details {
+            text-align: right;
+        }
+
+        .user-name {
+            font-weight: 600;
+            color: #333;
+        }
+
+        .logout-btn {
+            padding: 8px 16px;
+            background: #ef4444;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 0.9em;
+            transition: background 0.3s;
+        }
+
+        .logout-btn:hover {
+            background: #dc2626;
+        }
+
+        .dashboard {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-title {
+            font-size: 0.9em;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+
+        .card-value {
+            font-size: 2em;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .income-card .card-value {
+            color: #10b981;
+        }
+
+        .expense-card .card-value {
+            color: #ef4444;
+        }
+
+        .balance-card .card-value {
+            color: #667eea;
+        }
+
+        .card-change {
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .transaction-form {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .form-title {
+            font-size: 1.5em;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            font-size: 1em;
+            transition: border-color 0.3s;
+        }
+
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+
+        .type-selector {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .type-btn {
+            flex: 1;
+            padding: 12px;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            background: white;
+            cursor: pointer;
+            font-size: 1em;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+
+        .type-btn.active.income {
+            background: #10b981;
+            color: white;
+            border-color: #10b981;
+        }
+
+        .type-btn.active.expense {
+            background: #ef4444;
+            color: white;
+            border-color: #ef4444;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .submit-btn:hover {
+            transform: scale(1.02);
+        }
+
+        .submit-btn:active {
+            transform: scale(0.98);
+        }
+
+        .transactions-list {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            max-height: 600px;
+            overflow-y: auto;
+        }
+
+        .transactions-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .filter-group {
+            display: flex;
+            gap: 10px;
+        }
+
+        .filter-btn {
+            padding: 8px 16px;
+            border: 2px solid #e5e7eb;
+            border-radius: 6px;
+            background: white;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .filter-btn.active {
+            background: #667eea;
+            color: white;
+            border-color: #667eea;
+        }
+
+        .transaction-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            transition: all 0.3s;
+        }
+
+        .transaction-item:hover {
+            border-color: #667eea;
+            background: #f9fafb;
+        }
+
+        .transaction-info {
+            flex: 1;
+        }
+
+        .transaction-category {
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .transaction-note {
+            font-size: 0.9em;
+            color: #666;
+            margin-bottom: 5px;
+        }
+
+        .transaction-date {
+            font-size: 0.85em;
+            color: #999;
+        }
+
+        .transaction-amount {
+            font-size: 1.3em;
+            font-weight: bold;
+        }
+
+        .transaction-amount.income {
+            color: #10b981;
+        }
+
+        .transaction-amount.expense {
+            color: #ef4444;
+        }
+
+        .delete-btn {
+            background: #ef4444;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-left: 10px;
+            transition: background 0.3s;
+        }
+
+        .delete-btn:hover {
+            background: #dc2626;
+        }
+
+        .charts-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .chart-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .chart-title {
+            font-size: 1.3em;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .export-section {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            text-align: center;
+        }
+
+        .export-btn {
+            padding: 15px 30px;
+            background: #10b981;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1em;
+            font-weight: 600;
+            cursor: pointer;
+            margin: 10px;
+            transition: background 0.3s;
+        }
+
+        .export-btn:hover {
+            background: #059669;
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 40px;
+            color: #999;
+        }
+
+        .empty-state svg {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 20px;
+            opacity: 0.3;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            .login-card {
+                padding: 30px 20px;
+            }
+
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+
+            .charts-section {
+                grid-template-columns: 1fr;
+            }
+
+            .header {
+                flex-direction: column;
+                gap: 20px;
+                padding: 20px;
+            }
+
+            .header-left {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .user-info {
+                flex-direction: column;
+            }
+
+            .user-details {
+                text-align: center;
+            }
+
+            .filter-group {
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+        const { useState, useEffect } = React;
+
+        const EXPENSE_CATEGORIES = [
+            'Food & Dining',
+            'Transportation',
+            'Shopping',
+            'Entertainment',
+            'Bills & Utilities',
+            'Healthcare',
+            'Education',
+            'Groceries',
+            'Rent',
+            'Insurance',
+            'Other'
+        ];
+
+        const INCOME_CATEGORIES = [
+            'Salary',
+            'Freelance',
+            'Business',
+            'Investments',
+            'Rental Income',
+            'Other'
+        ];
+
+        // Logo Component
+        function AppLogo() {
+            return (
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+            );
+        }
+
+        // Install Prompt Component
+        function InstallPrompt() {
+            const [showPrompt, setShowPrompt] = useState(false);
+            const [deferredPrompt, setDeferredPrompt] = useState(null);
+
+            useEffect(() => {
+                const handler = (e) => {
+                    e.preventDefault();
+                    setDeferredPrompt(e);
+                    setShowPrompt(true);
+                };
+
+                window.addEventListener('beforeinstallprompt', handler);
+
+                return () => window.removeEventListener('beforeinstallprompt', handler);
+            }, []);
+
+            const handleInstall = async () => {
+                if (!deferredPrompt) return;
+
+                deferredPrompt.prompt();
+                const { outcome } = await deferredPrompt.userChoice;
+
+                if (outcome === 'accepted') {
+                    setShowPrompt(false);
+                }
+                setDeferredPrompt(null);
+            };
+
+            if (!showPrompt) return null;
+
+            return (
+                <div className="install-prompt">
+                    <span>📱 Install MoneyMate on your device!</span>
+                    <button onClick={handleInstall}>Install</button>
+                    <button className="close-btn" onClick={() => setShowPrompt(false)}>✕</button>
+                </div>
+            );
+        }
+
+        // Login Component
+        function LoginPage({ onLogin }) {
+            const [authMode, setAuthMode] = useState('login');
+            const [formData, setFormData] = useState({
+                username: '',
+                password: '',
+                confirmPassword: ''
+            });
+            const [showPassword, setShowPassword] = useState(false);
+            const [error, setError] = useState('');
+            const [success, setSuccess] = useState('');
+
+            const handleSubmit = (e) => {
+                e.preventDefault();
+                setError('');
+                setSuccess('');
+
+                if (!formData.username || !formData.password) {
+                    setError('Please fill in all fields');
+                    return;
+                }
+
+                if (authMode === 'signup') {
+                    if (formData.password !== formData.confirmPassword) {
+                        setError('Passwords do not match');
+                        return;
+                    }
+
+                    if (formData.password.length < 6) {
+                        setError('Password must be at least 6 characters');
+                        return;
+                    }
+
+                    const users = JSON.parse(localStorage.getItem('budgetUsers') || '{}');
+                    
+                    if (users[formData.username]) {
+                        setError('Username already exists');
+                        return;
+                    }
+
+                    users[formData.username] = {
+                        password: formData.password,
+                        createdAt: new Date().toISOString()
+                    };
+
+                    localStorage.setItem('budgetUsers', JSON.stringify(users));
+                    setSuccess('Account created successfully! Please login.');
+                    setAuthMode('login');
+                    setFormData({ username: formData.username, password: '', confirmPassword: '' });
+                } else {
+                    const users = JSON.parse(localStorage.getItem('budgetUsers') || '{}');
+                    
+                    if (!users[formData.username]) {
+                        setError('User not found. Please sign up.');
+                        return;
+                    }
+
+                    if (users[formData.username].password !== formData.password) {
+                        setError('Incorrect password');
+                        return;
+                    }
+
+                    localStorage.setItem('currentUser', formData.username);
+                    onLogin(formData.username);
+                }
+            };
+
+            return (
+                <div className="login-container">
+                    <div className="login-card">
+                        <div className="logo-container">
+                            <div className="app-logo">
+                                <AppLogo />
+                            </div>
+                            <h1 className="app-name">MoneyMate</h1>
+                            <p className="app-tagline">Your Personal Finance Companion</p>
+                        </div>
+
+                        <div className="auth-tabs">
+                            <button 
+                                className={`auth-tab ${authMode === 'login' ? 'active' : ''}`}
+                                onClick={() => {
+                                    setAuthMode('login');
+                                    setError('');
+                                    setSuccess('');
+                                }}
+                            >
+                                Login
+                            </button>
+                            <button 
+                                className={`auth-tab ${authMode === 'signup' ? 'active' : ''}`}
+                                onClick={() => {
+                                    setAuthMode('signup');
+                                    setError('');
+                                    setSuccess('');
+                                }}
+                            >
+                                Sign Up
+                            </button>
+                        </div>
+
+                        {error && <div className="error-message">{error}</div>}
+                        {success && <div className="success-message">{success}</div>}
+
+                        <form className="login-form" onSubmit={handleSubmit}>
+                            <div className="form-group">
+                                <label>Username</label>
+                                <input
+                                    type="text"
+                                    placeholder="Enter your username"
+                                    value={formData.username}
+                                    onChange={(e) => setFormData({...formData, username: e.target.value})}
+                                />
+                            </div>
+
+                            <div className="form-group">
+                                <label>Password</label>
+                                <div className="password-input-wrapper">
+                                    <input
+                                        type={showPassword ? "text" : "password"}
+                                        placeholder="Enter your password"
+                                        value={formData.password}
+                                        onChange={(e) => setFormData({...formData, password: e.target.value})}
+                                    />
+                                    <button
+                                        type="button"
+                                        className="password-toggle"
+                                        onClick={() => setShowPassword(!showPassword)}
+                                    >
+                                        {showPassword ? '👁️' : '👁️‍🗨️'}
+                                    </button>
+                                </div>
+                            </div>
+
+                            {authMode === 'signup' && (
+                                <div className="form-group">
+                                    <label>Confirm Password</label>
+                                    <input
+                                        type={showPassword ? "text" : "password"}
+                                        placeholder="Confirm your password"
+                                        value={formData.confirmPassword}
+                                        onChange={(e) => setFormData({...formData, confirmPassword: e.target.value})}
+                                    />
+                                </div>
+                            )}
+
+                            <button type="submit" className="login-btn">
+                                {authMode === 'login' ? 'Login' : 'Create Account'}
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            );
+        }
+
+        // Budget Tracker Component (same as before but with InstallPrompt)
+        function BudgetTracker({ username, onLogout }) {
+            const [transactions, setTransactions] = useState([]);
+            const [formData, setFormData] = useState({
+                type: 'expense',
+                amount: '',
+                category: '',
+                note: '',
+                date: new Date().toISOString().split('T')[0]
+            });
+            const [filter, setFilter] = useState('all');
+
+            useEffect(() => {
+                const userKey = `transactions_${username}`;
+                const saved = localStorage.getItem(userKey);
+                if (saved) {
+                    setTransactions(JSON.parse(saved));
+                }
+            }, [username]);
+
+            useEffect(() => {
+                const userKey = `transactions_${username}`;
+                localStorage.setItem(userKey, JSON.stringify(transactions));
+            }, [transactions, username]);
+
+            const handleSubmit = (e) => {
+                e.preventDefault();
+                if (!formData.amount || !formData.category) {
+                    alert('Please fill in all required fields');
+                    return;
+                }
+
+                const newTransaction = {
+                    id: Date.now(),
+                    ...formData,
+                    amount: parseFloat(formData.amount)
+                };
+
+                setTransactions([newTransaction, ...transactions]);
+                setFormData({
+                    type: 'expense',
+                    amount: '',
+                    category: '',
+                    note: '',
+                    date: new Date().toISOString().split('T')[0]
+                });
+            };
+
+            const deleteTransaction = (id) => {
+                if (confirm('Are you sure you want to delete this transaction?')) {
+                    setTransactions(transactions.filter(t => t.id !== id));
+                }
+            };
+
+            const handleLogout = () => {
+                if (confirm('Are you sure you want to logout?')) {
+                    localStorage.removeItem('currentUser');
+                    onLogout();
+                }
+            };
+
+            const filteredTransactions = transactions.filter(t => {
+                if (filter === 'all') return true;
+                return t.type === filter;
+            });
+
+            const totalIncome = transactions
+                .filter(t => t.type === 'income')
+                .reduce((sum, t) => sum + t.amount, 0);
+
+            const totalExpense = transactions
+                .filter(t => t.type === 'expense')
+                .reduce((sum, t) => sum + t.amount, 0);
+
+            const balance = totalIncome - totalExpense;
+
+            const exportToCSV = () => {
+                const headers = ['Date', 'Type', 'Category', 'Amount', 'Note'];
+                const rows = transactions.map(t => [
+                    t.date,
+                    t.type,
+                    t.category,
+                    t.amount,
+                    t.note || ''
+                ]);
+
+                const csv = [
+                    headers.join(','),
+                    ...rows.map(row => row.join(','))
+                ].join('\n');
+
+                const blob = new Blob([csv], { type: 'text/csv' });
+                const url = window.URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = `moneymate-${username}-${new Date().toISOString().split('T')[0]}.csv`;
+                a.click();
+            };
+
+            const exportToJSON = () => {
+                const json = JSON.stringify(transactions, null, 2);
+                const blob = new Blob([json], { type: 'application/json' });
+                const url = window.URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = `moneymate-${username}-${new Date().toISOString().split('T')[0]}.json`;
+                a.click();
+            };
+
+            const categories = formData.type === 'expense' ? EXPENSE_CATEGORIES : INCOME_CATEGORIES;
+
+            return (
+                <>
+                    <InstallPrompt />
+                    <div className="app-container">
+                        <div className="header">
+                            <div className="header-left">
+                                <div className="header-logo">
+                                    <AppLogo />
+                                </div>
+                                <div className="header-info">
+                                    <h1>MoneyMate</h1>
+                                    <p>Track your financial journey</p>
+                                </div>
+                            </div>
+                            <div className="user-info">
+                                <div className="user-details">
+                                    <div className="user-name">Welcome, {username}!</div>
+                                </div>
+                                <div className="user-avatar">{username.charAt(0).toUpperCase()}</div>
+                                <button className="logout-btn" onClick={handleLogout}>Logout</button>
+                            </div>
+                        </div>
+
+                        <div className="dashboard">
+                            <div className="card income-card">
+                                <div className="card-title">Total Income</div>
+                                <div className="card-value">₹{totalIncome.toLocaleString()}</div>
+                                <div className="card-change">This month</div>
+                            </div>
+
+                            <div className="card expense-card">
+                                <div className="card-title">Total Expenses</div>
+                                <div className="card-value">₹{totalExpense.toLocaleString()}</div>
+                                <div className="card-change">This month</div>
+                            </div>
+
+                            <div className="card balance-card">
+                                <div className="card-title">Balance</div>
+                                <div className="card-value" style={{color: balance >= 0 ? '#10b981' : '#ef4444'}}>
+                                    ₹{balance.toLocaleString()}
+                                </div>
+                                <div className="card-change">
+                                    {balance >= 0 ? 'Surplus' : 'Deficit'}
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="main-content">
+                            <div className="transaction-form">
+                                <h2 className="form-title">Add Transaction</h2>
+                                <form onSubmit={handleSubmit}>
+                                    <div className="type-selector">
+                                        <button
+                                            type="button"
+                                            className={`type-btn ${formData.type === 'income' ? 'active income' : ''}`}
+                                            onClick={() => setFormData({...formData, type: 'income', category: ''})}
+                                        >
+                                            💵 Income
+                                        </button>
+                                        <button
+                                            type="button"
+                                            className={`type-btn ${formData.type === 'expense' ? 'active expense' : ''}`}
+                                            onClick={() => setFormData({...formData, type: 'expense', category: ''})}
+                                        >
+                                            💸 Expense
+                                        </button>
+                                    </div>
+
+                                    <div className="form-group">
+                                        <label>Amount *</label>
+                                        <input
+                                            type="number"
+                                            step="0.01"
+                                            placeholder="Enter amount"
+                                            value={formData.amount}
+                                            onChange={(e) => setFormData({...formData, amount: e.target.value})}
+                                            required
+                                        />
+                                    </div>
+
+                                    <div className="form-group">
+                                        <label>Category *</label>
+                                        <select
+                                            value={formData.category}
+                                            onChange={(e) => setFormData({...formData, category: e.target.value})}
+                                            required
+                                        >
+                                            <option value="">Select category</option>
+                                            {categories.map(cat => (
+                                                <option key={cat} value={cat}>{cat}</option>
+                                            ))}
+                                        </select>
+                                    </div>
+
+                                    <div className="form-group">
+                                        <label>Date *</label>
+                                        <input
+                                            type="date"
+                                            value={formData.date}
+                                            onChange={(e) => setFormData({...formData, date: e.target.value})}
+                                            required
+                                        />
+                                    </div>
+
+                                    <div className="form-group">
+                                        <label>Note (Optional)</label>
+                                        <textarea
+                                            placeholder="Add a note..."
+                                            value={formData.note}
+                                            onChange={(e) => setFormData({...formData, note: e.target.value})}
+                                        />
+                                    </div>
+
+                                    <button type="submit" className="submit-btn">
+                                        Add Transaction
+                                    </button>
+                                </form>
+                            </div>
+
+                            <div className="transactions-list">
+                                <div className="transactions-header">
+                                    <h2 className="form-title">Transactions</h2>
+                                    <div className="filter-group">
+                                        <button
+                                            className={`filter-btn ${filter === 'all' ? 'active' : ''}`}
+                                            onClick={() => setFilter('all')}
+                                        >
+                                            All
+                                        </button>
+                                        <button
+                                            className={`filter-btn ${filter === 'income' ? 'active' : ''}`}
+                                            onClick={() => setFilter('income')}
+                                        >
+                                            Income
+                                        </button>
+                                        <button
+                                            className={`filter-btn ${filter === 'expense' ? 'active' : ''}`}
+                                            onClick={() => setFilter('expense')}
+                                        >
+                                            Expenses
+                                        </button>
+                                    </div>
+                                </div>
+
+                                {filteredTransactions.length === 0 ? (
+                                    <div className="empty-state">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4" />
+                                        </svg>
+                                        <h3>No transactions yet</h3>
+                                        <p>Add your first transaction to get started</p>
+                                    </div>
+                                ) : (
+                                    filteredTransactions.map(transaction => (
+                                        <div key={transaction.id} className="transaction-item">
+                                            <div className="transaction-info">
+                                                <div className="transaction-category">
+                                                    {transaction.type === 'income' ? '💵' : '💸'} {transaction.category}
+                                                </div>
+                                                {transaction.note && (
+                                                    <div className="transaction-note">{transaction.note}</div>
+                                                )}
+                                                <div className="transaction-date">
+                                                    {new Date(transaction.date).toLocaleDateString('en-IN', {
+                                                        year: 'numeric',
+                                                        month: 'short',
+                                                        day: 'numeric'
+                                                    })}
+                                                </div>
+                                            </div>
+                                            <div style={{display: 'flex', alignItems: 'center'}}>
+                                                <div className={`transaction-amount ${transaction.type}`}>
+                                                    {transaction.type === 'income' ? '+' : '-'}₹{transaction.amount.toLocaleString()}
+                                                </div>
+                                                <button
+                                                    className="delete-btn"
+                                                    onClick={() => deleteTransaction(transaction.id)}
+                                                >
+                                                    🗑️
+                                                </button>
+                                            </div>
+                                        </div>
+                                    ))
+                                )}
+                            </div>
+                        </div>
+
+                        <div className="charts-section">
+                            <div className="chart-card">
+                                <h3 className="chart-title">Expense Breakdown</h3>
+                                <ExpenseChart transactions={transactions} />
+                            </div>
+
+                            <div className="chart-card">
+                                <h3 className="chart-title">Monthly Trend</h3>
+                                <TrendChart transactions={transactions} />
+                            </div>
+                        </div>
+
+                        <div className="export-section">
+                            <h3 className="chart-title">Export Data</h3>
+                            <button className="export-btn" onClick={exportToCSV}>
+                                📊 Export as CSV
+                            </button>
+                            <button className="export-btn" onClick={exportToJSON}>
+                                📄 Export as JSON
+                            </button>
+                        </div>
+                    </div>
+                </>
+            );
+        }
+
+        function ExpenseChart({ transactions }) {
+            const canvasRef = React.useRef(null);
+            const chartRef = React.useRef(null);
+
+            useEffect(() => {
+                if (!canvasRef.current) return;
+
+                const expenses = transactions.filter(t => t.type === 'expense');
+                const categoryTotals = {};
+
+                expenses.forEach(t => {
+                    categoryTotals[t.category] = (categoryTotals[t.category] || 0) + t.amount;
+                });
+
+                const data = {
+                    labels: Object.keys(categoryTotals),
+                    datasets: [{
+                        data: Object.values(categoryTotals),
+                        backgroundColor: [
+                            '#ef4444', '#f59e0b', '#10b981', '#3b82f6', '#8b5cf6',
+                            '#ec4899', '#14b8a6', '#f97316', '#06b6d4', '#84cc16'
+                        ]
+                    }]
+                };
+
+                if (chartRef.current) {
+                    chartRef.current.destroy();
+                }
+
+                chartRef.current = new Chart(canvasRef.current, {
+                    type: 'doughnut',
+                    data: data,
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: true,
+                        plugins: {
+                            legend: {
+                                position: 'bottom'
+                            }
+                        }
+                    }
+                });
+
+                return () => {
+                    if (chartRef.current) {
+                        chartRef.current.destroy();
+                    }
+                };
+            }, [transactions]);
+
+            return <canvas ref={canvasRef}></canvas>;
+        }
+
+        function TrendChart({ transactions }) {
+            const canvasRef = React.useRef(null);
+            const chartRef = React.useRef(null);
+
+            useEffect(() => {
+                if (!canvasRef.current) return;
+
+                const dateMap = {};
+                transactions.forEach(t => {
+                    if (!dateMap[t.date]) {
+                        dateMap[t.date] = { income: 0, expense: 0 };
+                    }
+                    if (t.type === 'income') {
+                        dateMap[t.date].income += t.amount;
+                    } else {
+                        dateMap[t.date].expense += t.amount;
+                    }
+                });
+
+                const dates = Object.keys(dateMap).sort();
+                const incomeData = dates.map(date => dateMap[date].income);
+                const expenseData = dates.map(date => dateMap[date].expense);
+
+                const data = {
+                    labels: dates.map(d => new Date(d).toLocaleDateString('en-IN', { month: 'short', day: 'numeric' })),
+                    datasets: [
+                        {
+                            label: 'Income',
+                            data: incomeData,
+                            borderColor: '#10b981',
+                            backgroundColor: 'rgba(16, 185, 129, 0.1)',
+                            tension: 0.4
+                        },
+                        {
+                            label: 'Expenses',
+                            data: expenseData,
+                            borderColor: '#ef4444',
+                            backgroundColor: 'rgba(239, 68, 68, 0.1)',
+                            tension: 0.4
+                        }
+                    ]
+                };
+
+                if (chartRef.current) {
+                    chartRef.current.destroy();
+                }
+
+                chartRef.current = new Chart(canvasRef.current, {
+                    type: 'line',
+                    data: data,
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: true,
+                        plugins: {
+                            legend: {
+                                position: 'bottom'
+                            }
+                        },
+                        scales: {
+                            y: {
+                                beginAtZero: true
+                            }
+                        }
+                    }
+                });
+
+                return () => {
+                    if (chartRef.current) {
+                        chartRef.current.destroy();
+                    }
+                };
+            }, [transactions]);
+
+            return <canvas ref={canvasRef}></canvas>;
+        }
+
+        // Main App Component
+        function App() {
+            const [currentUser, setCurrentUser] = useState(null);
+
+            useEffect(() => {
+                const savedUser = localStorage.getItem('currentUser');
+                if (savedUser) {
+                    setCurrentUser(savedUser);
+                }
+            }, []);
+
+            const handleLogin = (username) => {
+                setCurrentUser(username);
+            };
+
+            const handleLogout = () => {
+                setCurrentUser(null);
+            };
+
+            if (!currentUser) {
+                return <LoginPage onLogin={handleLogin} />;
+            }
+
+            return <BudgetTracker username={currentUser} onLogout={handleLogout} />;
+        }
+
+        // Register Service Worker for PWA
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                const swCode = `
+                    self.addEventListener('install', (e) => {
+                        e.waitUntil(
+                            caches.open('moneymate-v1').then((cache) => {
+                                return cache.addAll(['/']);
+                            })
+                        );
+                    });
+
+                    self.addEventListener('fetch', (e) => {
+                        e.respondWith(
+                            caches.match(e.request).then((response) => {
+                                return response || fetch(e.request);
+                            })
+                        );
+                    });
+                `;
+
+                const blob = new Blob([swCode], { type: 'application/javascript' });
+                const swUrl = URL.createObjectURL(blob);
+
+                navigator.serviceWorker.register(swUrl);
+            });
+        }
+
+        ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
+</body>
+</html>
