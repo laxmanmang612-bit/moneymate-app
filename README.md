@@ -1,1 +1,1 @@
-# moneymate-app
+moneymate-app
